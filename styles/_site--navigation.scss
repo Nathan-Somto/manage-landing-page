@@ -10,7 +10,7 @@
 }
 .site--navigation{
    @extend %flex-layout;
-  
+  color:$dark-blue;
     
     align-items: center;
     justify-content: space-between;
