@@ -255,6 +255,7 @@ p {
 
 .btn {
   background-color: hsl(12, 88%, 59%);
+  font-weight: 700;
   padding: 0.75rem 1.25rem;
   color: hsl(0, 0%, 98%);
   border-radius: 2rem;
@@ -265,6 +266,7 @@ p {
 
 .btn-sm {
   background-color: hsl(12, 88%, 59%);
+  font-weight: 700;
   padding: 0.25rem 0.75rem;
   color: hsl(0, 0%, 98%);
   border-radius: 2rem;
@@ -275,6 +277,18 @@ p {
   justify-content: center;
   font-size: 1.3rem;
   height: 2rem;
+}
+
+.btn-white {
+  background-color: #fff;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  color: hsl(12, 88%, 59%);
+  border-radius: 2rem;
+  text-align: center;
+  display: block;
+  box-shadow: 0.25rem 0.3rem 0.75rem rgba(255, 255, 255, 0.8);
+  box-shadow: none;
 }
 
 .active {
@@ -399,4 +413,69 @@ p {
 .testimonal--section--card figure img {
   height: 100%;
   width: 100%;
+}
+
+.top--footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  z-index: -7;
+  width: 100%;
+  justify-content: space-between;
+  background-color: hsl(12, 88%, 59%);
+  margin-top: 3.375rem;
+  padding: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 1000px) {
+  .top--footer {
+    display: flex;
+    flex-direction: row;
+    height: 15rem;
+    text-align: left;
+  }
+}
+.top--footer figure {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .top--footer figure {
+    display: block;
+  }
+}
+.top--footer--z--img--1, .top--footer--z--img--2 {
+  position: absolute;
+  width: 700px;
+  opacity: 0.1;
+}
+.top--footer--z--img--1 img, .top--footer--z--img--2 img {
+  width: 80%;
+}
+.top--footer--z--img--1 {
+  z-index: -5;
+  left: -2rem;
+  top: -1.2rem;
+  height: 18rem;
+  overflow: hidden;
+}
+.top--footer--z--img--2 {
+  right: -31.5rem;
+  z-index: -6;
+  top: -26.8rem;
+  height: 25rem;
+}
+.top--footer h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 2.85rem;
+  padding-left: 3rem;
+}
+@media (min-width: 1000px) {
+  .top--footer h3 {
+    font-size: 2.65rem;
+  }
+}
+.top--footer .btn-white {
+  margin-right: 3.75rem;
 }

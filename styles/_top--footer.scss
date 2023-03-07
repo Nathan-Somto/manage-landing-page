@@ -1,0 +1,69 @@
+@mixin z--img(){
+    position:absolute;
+    width:700px;
+    opacity: .1;
+    img{
+        width:80%;
+     } 
+
+}
+.top--footer{
+    @include flex--container(column);
+    position:relative;
+    text-align: center;
+    z-index:-7;
+    @include lg{
+    @include flex--container(row);
+    height:$base-font-size * 15;
+    text-align:left;
+    }
+    width:percentage($number: 1);
+    justify-content: space-between;
+    background-color: $bright-red;
+    margin-top: $base-margin * 13.5;
+    figure{
+        display:none;
+    }
+    padding:$base-padding * 10;
+    @include lg{
+        figure{
+            display:block;
+        }
+    }
+    &--z--img--1 , &--z--img--2{
+        @include z--img();
+    }
+    &--z--img--1{
+      
+       
+        z-index:-5;
+        left: -2rem;
+        top:-1.2rem;
+        height: 18rem;
+      
+        overflow:hidden;
+       
+    
+    }
+    &--z--img--2{
+       
+        right:-31.5rem;
+        z-index:-6;
+     top:-26.8rem;
+        height: 25rem;
+      
+    }
+  h3{
+    color: $white;
+    font-size: $base-font-size + 1.5;
+    @include lg{
+    font-size: $base-font-size + 1.65;
+    }
+    line-height: $base-font-size * 2.85;
+    padding-left: $base-padding * 12;
+  }
+  .btn-white{
+    margin-right:$base-padding * 15;
+  }
+    align-items: center;
+}

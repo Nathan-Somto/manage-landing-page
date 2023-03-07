@@ -1,6 +1,7 @@
 
 @mixin btn($bg-color:$bright-red,$size:$base-padding+1, $color:$very-light-gray){
 background-color: $bg-color;
+font-weight: $f-w-700;
 padding:$size - 0.5  $size;
 color:$color;
 border-radius: $base-rounded *4;
@@ -17,4 +18,8 @@ flex-direction: column;
 justify-content: center;
 font-size:$base-font-size  + 0.3;
 height: $base-font-size + 1;
+}
+.btn-white{
+    @include btn($white, $base-padding + 1.25, $bright-red);
+    box-shadow: none;
 }
