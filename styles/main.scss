@@ -1,0 +1,9 @@
+@import '_variables';
+@import '_base';
+@import '_breakpoints';
+@import '_site--navigation';
+@import '_btn';
+h1{
+    font-size:1.2rem;
+    font-weight:$f-w-700;
+}
