@@ -1,0 +1,71 @@
+@mixin span {
+    padding:$base-padding * 2 $base-padding * 4;
+    background-color: $bright-red;
+    color:$white;
+    border-radius: $base-rounded + 2.5;
+}
+.features--section{
+    display:flex;
+    flex-direction: column;
+    margin-top:$base-margin * 18;
+    padding-left:$base-padding*12;
+    &--left{
+        text-align: center;
+        h2{
+            font-size:$base-font-size + .85;
+        }
+        p{
+            width:percentage($number: .8);
+            margin: 0 auto;
+        }
+    }
+    &--right{
+        margin-left: auto;
+        
+        h1{
+            color:$very-dark-blue;
+            font-size: $base-font-size + 0.05;
+            font-weight:$f-w-700;
+            background-color: $very-pale-red;
+            border-radius: $base-rounded * 3 0 0 $base-rounded * 3 ;
+            padding:$base-padding * 2 $base-padding * 4;
+            
+            span{
+                @include span;
+                margin-left: -$base-margin * 3.5;
+                margin-right:$base-margin * 2;
+            }
+        }
+        p{
+           
+            width:percentage($number: .8);
+            color: rgba($black, 0.5);
+        }
+    }
+    @include md{
+        &{
+            flex-direction: row;
+        }
+        &--left{
+            text-align: left;
+            p{
+                width: percentage($number: .7);
+                margin:0;
+            }
+        }
+        &--right{
+            margin-left: $base-margin * 8;
+            h1{
+                background-color: transparent;
+                padding:0;
+            }
+            p{
+                margin-left: $base-margin * 12;
+            }
+            span{
+                margin-right:$base-margin*2;
+                margin-left:0;
+            }
+        }
+    }
+}

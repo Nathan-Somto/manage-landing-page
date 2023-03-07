@@ -182,6 +182,72 @@ p {
   }
 }
 
+.features--section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5rem;
+  padding-left: 3rem;
+}
+.features--section--left {
+  text-align: center;
+}
+.features--section--left h2 {
+  font-size: 1.85rem;
+}
+.features--section--left p {
+  width: 80%;
+  margin: 0 auto;
+}
+.features--section--right {
+  margin-left: auto;
+}
+.features--section--right h1 {
+  color: hsl(223, 12%, 13%);
+  font-size: 1.05rem;
+  font-weight: 700;
+  background-color: hsl(13, 100%, 96%);
+  border-radius: 1.5rem 0 0 1.5rem;
+  padding: 0.5rem 1rem;
+}
+.features--section--right h1 span {
+  padding: 0.5rem 1rem;
+  background-color: hsl(12, 88%, 59%);
+  color: #fff;
+  border-radius: 3rem;
+  margin-left: -0.875rem;
+  margin-right: 0.5rem;
+}
+.features--section--right p {
+  width: 80%;
+  color: rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 800px) {
+  .features--section {
+    flex-direction: row;
+  }
+  .features--section--left {
+    text-align: left;
+  }
+  .features--section--left p {
+    width: 70%;
+    margin: 0;
+  }
+  .features--section--right {
+    margin-left: 2rem;
+  }
+  .features--section--right h1 {
+    background-color: transparent;
+    padding: 0;
+  }
+  .features--section--right p {
+    margin-left: 3rem;
+  }
+  .features--section--right span {
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
+}
+
 .btn {
   background-color: hsl(12, 88%, 59%);
   padding: 0.75rem 1.25rem;
