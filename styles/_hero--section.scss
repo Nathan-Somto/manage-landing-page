@@ -1,9 +1,14 @@
 $size: calc($base-font-size + 2rem);
-@mixin z--index($top, $right){
+@mixin z--index($top :0, $h-position, $h-offset){
     position: absolute;
     z-index:-20;
     top:$top;
-    right:$right;
+    @if $h-position {
+    right:$h-offset;
+}
+@else{
+    left: $h-offset;
+}
 }
 .hero--section{
     display:flex;
@@ -13,7 +18,7 @@ $size: calc($base-font-size + 2rem);
     padding:$base-padding*2;
     
     &--z--img{
-        @include z--index(-$base-font-size * 30,-60%);
+        @include z--index(-$base-font-size * 30,true,-60%);
          
      }
   
@@ -59,7 +64,7 @@ $size: calc($base-font-size + 2rem);
     height:450px;
         }
         &--z--img{
-            @include z--index(-$base-font-size * 20,-10%);
+            @include z--index(-$base-font-size * 20,true,-10%);
              
          }
         &--img{

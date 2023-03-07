@@ -1,0 +1,133 @@
+$h--offset--value: -$base-font-size *  30;
+@mixin flex--container($direction){
+    display:flex;
+    flex-direction: $direction;
+
+}
+.active{
+    background-color: $bright-red !important;
+}
+.testimonal--section{
+    &--container{
+
+        margin-top: $base-font-size * 6;
+        @include lg{
+            margin-top: $base-font-size * 8;
+        }
+        width:percentage($number: 1);
+        position: relative;
+        @include flex--container(column);
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            font-weight: $f-w-700;
+            font-size: $base-font-size  + 0.75;
+            margin-bottom: $base-margin* 20;
+        }
+
+    }
+   
+    &--z--img{
+        display:none;
+        @include md{
+            &{
+                display:block;
+            }
+        }
+        @include z--index(-$base-font-size*5.9, false , $h--offset--value);
+    }
+    &--carousel--container{
+        @include flex--container(row);
+        width:100%;
+        position: relative;
+        .paginate--container{
+            display:flex;
+            position:absolute;
+            width:100%;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:0 auto;
+          
+            .paginate--button{
+                padding: $base-padding * 2;
+                border-radius:  percentage($number: .5);
+                border: 1px solid $bright-red;
+                margin-right:$base-margin * 3.5;
+                background-color: transparent;
+                transition: background-color ease-in .3s;
+                cursor:pointer;
+               
+            }
+        }
+        .btn-sm{
+            display:none;
+        }
+      
+        @include lg{
+            .paginate--container{
+                display:none;
+            }
+            .btn-sm{
+                display: flex;
+            }
+            .btn-sm:nth-child(1){
+                position: absolute;
+                left:$base-padding *2;
+                top:50%;
+                bottom:0;
+               
+               
+            }
+            .btn-sm:last-child{
+                position: absolute;
+                right:$base-padding *2;
+                top:50%;
+                bottom:0;
+            }
+        }
+    }
+   
+   
+    &--card{
+        @include flex--container(column);
+        justify-content: center;
+        align-items: center;
+        width: percentage($number: .8);
+        @include lg{
+            &{
+                width: 40%;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+       
+        flex-shrink: 0;
+        margin-top:0;
+        margin-left: 10%;
+        margin-right:10%;
+        margin-bottom: $base-margin * 12;
+        background-color: $very-light-gray;
+        padding:$base-padding *2  $base-padding * 9.5;
+        height:$base-font-size * 15 ;
+        position:relative;
+        text-align: center;
+        border-radius: $base-rounded + 2;
+        h3{
+            margin-bottom: 0;
+        }
+        figure{
+            position: absolute;
+            top:-$base-font-size*3;
+            left:0;
+            right:0;
+            margin:0 auto;
+            height: $base-font-size * 4.5;
+            width:$base-font-size * 4.5;
+            img{
+                height:percentage($number: 1);
+                width:percentage($number: 1);
+            }
+        }
+    }
+}

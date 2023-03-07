@@ -16,6 +16,11 @@ ul {
   padding: 0;
 }
 
+h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
 a {
   text-decoration: none;
 }
@@ -258,7 +263,140 @@ p {
   box-shadow: 0.25rem 0.3rem 0.75rem rgba(242, 95, 58, 0.8);
 }
 
-h1 {
-  font-size: 1.2rem;
+.btn-sm {
+  background-color: hsl(12, 88%, 59%);
+  padding: 0.25rem 0.75rem;
+  color: hsl(0, 0%, 98%);
+  border-radius: 2rem;
+  text-align: center;
+  display: block;
+  box-shadow: 0.25rem 0.3rem 0.75rem rgba(242, 95, 58, 0.8);
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.3rem;
+  height: 2rem;
+}
+
+.active {
+  background-color: hsl(12, 88%, 59%) !important;
+}
+
+.testimonal--section--container {
+  margin-top: 6rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 1000px) {
+  .testimonal--section--container {
+    margin-top: 8rem;
+  }
+}
+.testimonal--section--container h2 {
   font-weight: 700;
+  font-size: 1.75rem;
+  margin-bottom: 5rem;
+}
+.testimonal--section--z--img {
+  display: none;
+  position: absolute;
+  z-index: -20;
+  top: -5.9rem;
+  left: -30rem;
+}
+@media (min-width: 800px) {
+  .testimonal--section--z--img {
+    display: block;
+  }
+}
+.testimonal--section--carousel--container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+.testimonal--section--carousel--container .paginate--container {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.testimonal--section--carousel--container .paginate--container .paginate--button {
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid hsl(12, 88%, 59%);
+  margin-right: 0.875rem;
+  background-color: transparent;
+  transition: background-color ease-in 0.3s;
+  cursor: pointer;
+}
+.testimonal--section--carousel--container .btn-sm {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .testimonal--section--carousel--container .paginate--container {
+    display: none;
+  }
+  .testimonal--section--carousel--container .btn-sm {
+    display: flex;
+  }
+  .testimonal--section--carousel--container .btn-sm:nth-child(1) {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    bottom: 0;
+  }
+  .testimonal--section--carousel--container .btn-sm:last-child {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    bottom: 0;
+  }
+}
+.testimonal--section--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-shrink: 0;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 3rem;
+  background-color: hsl(0, 0%, 98%);
+  padding: 0.5rem 2.375rem;
+  height: 15rem;
+  position: relative;
+  text-align: center;
+  border-radius: 2.5rem;
+}
+@media (min-width: 1000px) {
+  .testimonal--section--card {
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+.testimonal--section--card h3 {
+  margin-bottom: 0;
+}
+.testimonal--section--card figure {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 4.5rem;
+  width: 4.5rem;
+}
+.testimonal--section--card figure img {
+  height: 100%;
+  width: 100%;
 }

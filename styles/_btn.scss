@@ -11,3 +11,10 @@ box-shadow: $base-padding $base-padding*1.2 $base-padding*3 rgba($bg-color,0.8);
 .btn{
     @include btn;
 }
+.btn-sm{
+    @include btn($bright-red,$base-padding+0.5, $very-light-gray);
+flex-direction: column;
+justify-content: center;
+font-size:$base-font-size  + 0.3;
+height: $base-font-size + 1;
+}

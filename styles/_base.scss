@@ -16,6 +16,10 @@ body{
 ul {
 @include reset_li();
 }
+h1{
+    font-size:1.2rem;
+    font-weight:$f-w-700;
+}
 a{
     text-decoration: none;
 }
