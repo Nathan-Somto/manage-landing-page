@@ -1,0 +1,48 @@
+.footer{
+    background-color: $very-dark-blue;
+    @include flex--container(column);
+   h1,p{
+    color: $white;
+   }
+   &--child--3 p:last-child{
+    opacity:0;
+   }
+   &--child--1 div img {
+    margin-right: $base-margin + 0.75;
+   }
+   .btn-sm{
+    display:inline;
+    outline: none;
+    border:none;
+    padding:$base-padding + 1.15rem;
+    font-size:$base-font-size * 0.8;
+    box-shadow: none;
+   }
+   input{
+    padding: $base-padding + 0.65rem;
+    border-radius : $base-rounded + 0.9;
+    outline: none;
+    border:none;
+    margin-right:$base-margin * 2.5;
+   }
+   @include md{
+    &{
+        @include flex--container(row);
+        justify-content: space-between;
+        align-items: center;
+        padding: $base-padding + 3 $base-padding + 5;
+    }
+    &--child--1  div, &--child--4 p{
+        margin-top: $base-margin + 4.25; 
+       }
+   }
+}
+.attribution{
+    text-align: center;
+    background-color: $dark-blue;
+    padding:$base-padding + 0.5;
+    color:$white;
+    a{
+        color: rgba($white, 0.5);
+    }
+}
