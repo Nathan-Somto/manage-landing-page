@@ -1,8 +1,8 @@
 %flex-layout{
     display:flex;
     width:percentage($number: 1);
-    height:$base-font-size  + 4.5;
-    position:fixed;
+    height:$base-font-size  + 2.5;
+    position:relative;
     top:0;
     z-index:120;
     padding: $base-padding + 4 $base-padding + 0.5;
@@ -11,9 +11,9 @@
 .site--navigation{
    @extend %flex-layout;
   color:$dark-blue;
-    
     align-items: center;
     justify-content: space-between;
+    background-color:transparent;
     &--toggle{
         width:$base-font-size*1.2;
     }

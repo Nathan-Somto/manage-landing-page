@@ -4,6 +4,7 @@ $h--offset--value: -$base-font-size *  30;
     flex-direction: $direction;
 
 }
+
 .active{
     background-color: $bright-red !important;
 }
@@ -11,6 +12,7 @@ $h--offset--value: -$base-font-size *  30;
     &--container{
 
         margin-top: $base-font-size * 6;
+       
         @include lg{
             margin-top: $base-font-size * 8;
         }
@@ -46,9 +48,10 @@ $h--offset--value: -$base-font-size *  30;
             width:100%;
             bottom:0;
             left:0;
-            right:0;
-            margin:0 auto;
-          
+            right:0%;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: $base-margin* 3;
             .paginate--button{
                 padding: $base-padding * 2;
                 border-radius:  percentage($number: .5);
@@ -75,16 +78,10 @@ $h--offset--value: -$base-font-size *  30;
                 position: absolute;
                 left:$base-padding *2;
                 top:50%;
-                bottom:0;
-               
+                z-index:20;
                
             }
-            .btn-sm:last-child{
-                position: absolute;
-                right:$base-padding *2;
-                top:50%;
-                bottom:0;
-            }
+            
         }
     }
    
@@ -129,5 +126,70 @@ $h--offset--value: -$base-font-size *  30;
                 width:percentage($number: 1);
             }
         }
+    }
+}
+ /* .slide{
+    animation-name: slide-in;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-delay:0.5s;
+    animation-iteration-count: infinite;
+ } */
+ .move--in{
+    animation-name: move-in;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+ }
+ 
+ .move--out{
+    animation-name: move-out;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+ }
+ @keyframes move-out {
+    0%{
+        transform: translateX(0%);
+        opacity:1;
+    }
+    50%{
+        transform: translateX(-25%);
+        opacity:0.5;
+    }
+    70%{
+        opacity: 0.35;
+        transform: translateX(-50%);
+    }
+    100%{
+        opacity:0;
+        transform: translateX(-100%);
+    }
+ }
+ @keyframes move-in {
+    0%{
+        transform: translateX(100%);
+        opacity:0;
+    }
+    50%{
+        transform: translateX(50%);
+        opacity:0.5;
+    }
+    70%{
+        opacity: 0.7;
+        transform: translateX(25%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+ }
+
+@include lg{
+    #js--prev--btn{
+            position: absolute;
+            right:0;
+            top:50%;
+            bottom:0;
+            z-index:24;
+        
     }
 }

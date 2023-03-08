@@ -58,12 +58,14 @@
     font-size: $base-font-size + 1.5;
     @include lg{
     font-size: $base-font-size + 1.65;
+    padding-left: $base-padding * 12;
+    .btn-white{
+        margin-right:$base-padding * 15;
+      }
     }
     line-height: $base-font-size * 2.85;
-    padding-left: $base-padding * 12;
+   
   }
-  .btn-white{
-    margin-right:$base-padding * 15;
-  }
+  
     align-items: center;
 }

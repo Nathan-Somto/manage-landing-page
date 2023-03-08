@@ -1,14 +1,34 @@
 .footer{
     background-color: $very-dark-blue;
-    @include flex--container(column);
+    @include flex--container(column-reverse);
+    padding: $base-padding + 3;
+    align-items: center;
+    text-align: center;
+    fill:$white;
    h1,p{
     color: $white;
+    cursor: pointer;
+    &:hover{
+     color:$bright-red;
+    }
+   }
+   /*&--child--3,&--child--2{
+   
+   }*/
+   img{
+    &:hover{
+        fill: $bright-red;
+    }
    }
    &--child--3 p:last-child{
     opacity:0;
+    display:none;
    }
    &--child--1 div img {
     margin-right: $base-margin + 0.75;
+   }
+   &--child--1  div, &--child--4 p{
+    margin-top: $base-margin + 1.25; 
    }
    .btn-sm{
     display:inline;
@@ -23,16 +43,23 @@
     border-radius : $base-rounded + 0.9;
     outline: none;
     border:none;
-    margin-right:$base-margin * 2.5;
+    
    }
    @include md{
     &{
         @include flex--container(row);
         justify-content: space-between;
         align-items: center;
+        text-align: left;
         padding: $base-padding + 3 $base-padding + 5;
     }
-    &--child--1  div, &--child--4 p{
+    input{
+        margin-right:$base-margin * 2.5;
+    }
+    &--child--3 p:last-child{
+        display:block;
+       }
+       &--child--1  div, &--child--4 p{
         margin-top: $base-margin + 4.25; 
        }
    }
