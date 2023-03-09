@@ -37,9 +37,7 @@ Users are able to:
 
 
 ### Links
-
-- Solution URL: [ solution URL ](https://your-solution-url.com)
-- Live Site URL: [ live site URL](https://your-live-site-url.com)
+- Live Site URL: [ live site ](https://nathan-somto.github.io/manage-landing-page/)
 
 ## My process
 
